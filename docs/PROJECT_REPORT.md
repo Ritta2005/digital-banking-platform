@@ -31,7 +31,7 @@ held until a manager approves them**.
 2. Let customers view their account and make deposits, withdrawals and transfers.
 3. Validate every amount, balance, account and owner on the server.
 4. Keep balances consistent using database transactions and row locking.
-5. Hold transfers of ₹25,000 or more (configurable) as *pending* until a manager approves or rejects them, and make sure a request can be approved only once.
+5. Hold transfers of ₹1,00,000 or more (configurable) as *pending* until a manager approves or rejects them, and make sure a request can be approved only once.
 6. Show a clear transaction history with type, status, date, and debit/credit direction.
 7. Provide a simple, responsive, readable user interface.
 

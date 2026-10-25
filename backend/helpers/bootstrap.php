@@ -205,5 +205,5 @@ function get_threshold_paise(): int
     $stmt->execute(['HIGH_VALUE_THRESHOLD']);
     $value = $stmt->fetchColumn();
     $paise = $value === false ? null : amount_to_paise($value);
-    return $paise ?? 2500000;   // fall back to Rs 25,000.00
+    return $paise ?? 10000000;   // fall back to Rs 1,00,000.00
 }

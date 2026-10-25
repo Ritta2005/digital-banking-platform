@@ -7,11 +7,11 @@
 -- Educational simulation only. NOT real banking software.
 -- =====================================================================
 
-CREATE DATABASE IF NOT EXISTS digital_banking
+CREATE DATABASE IF NOT EXISTS digital_banking_final
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
 
-USE digital_banking;
+USE digital_banking_final;
 
 -- Application settings (e.g. the high-value transfer threshold)
 CREATE TABLE IF NOT EXISTS app_settings (
@@ -131,5 +131,5 @@ CREATE TABLE IF NOT EXISTS approval (
 -- Default setting. INSERT IGNORE = does nothing if it already exists,
 -- so your changed threshold is never overwritten.
 INSERT IGNORE INTO app_settings (setting_key, setting_value, description)
-VALUES ('HIGH_VALUE_THRESHOLD', '25000.00',
+VALUES ('HIGH_VALUE_THRESHOLD', '100000.00',
         'Transfers at or above this amount (INR) need manager approval');

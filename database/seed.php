@@ -58,7 +58,7 @@ try {
 
     echo "Settings...\n";
     $pdo->prepare("INSERT IGNORE INTO app_settings (setting_key, setting_value, description) VALUES (?, ?, ?)")
-        ->execute(['HIGH_VALUE_THRESHOLD', '25000.00', 'Transfers at or above this amount (INR) need manager approval']);
+        ->execute(['HIGH_VALUE_THRESHOLD', '100000.00', 'Transfers at or above this amount (INR) need manager approval']);
 
     echo "Users...\n";
     $managerId = seed_manager($pdo, 'Demo Manager', 'manager.demo@example.com', 'Manager@123');

@@ -1,7 +1,7 @@
 # Digital Banking Platform – Smart Transaction Management
 
 A **college simulation** of an online bank: customers can deposit, withdraw and transfer
-(simulated) money; **high-value transfers (₹25,000 or more) wait for a manager's approval**.
+(simulated) money; **high-value transfers (₹1,00,000 or more) wait for a manager's approval**.
 Built with **React (Vite) + PHP 8 (PDO) + MySQL 8**.
 
 > ⚠️ Educational project only. It uses fake money and demo data. It is **not** production banking software.
@@ -141,7 +141,7 @@ Open **<http://localhost:5173>**. Use `localhost` for the website (not a differe
 1. Log in as **Aarav** → dashboard shows balance ₹50,000 and a pending transfer.
 2. **Deposit & Withdraw**: deposit ₹1,000, withdraw ₹500 (watch the balance change).
 3. **Transfer Money**: send ₹2,000 to `100100000002` → completes immediately.
-4. Transfer ₹25,000 or more to `100100000002` → status **Pending approval**, balance unchanged.
+4. Transfer ₹1,00,000 or more to `100100000002` → status **Pending approval**, balance unchanged.
 5. Log out. Log in as **Manager** → **Pending Approvals** → approve one, reject another (reason required).
 6. Log in as Aarav / Meera → balances updated only for the approved transfer; history shows Completed / Rejected.
 7. Try something invalid: withdraw more than the balance, deposit `-5`, wrong password, unknown receiver.

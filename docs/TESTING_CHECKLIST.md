@@ -1,7 +1,7 @@
 # Testing Checklist – Digital Banking Platform
 
 Prepare: MySQL running, `schema.sql` imported, `php database/seed.php` run, PHP server on :8000, `npm run dev` on :5173.
-Fill in the **Actual result** and **Pass/Fail** columns while you test. Demo data starts as: Aarav ₹50,000, Meera ₹25,000, one pending ₹30,000 transfer.
+Fill in the **Actual result** and **Pass/Fail** columns while you test. Demo data starts as: Aarav ₹50,000, Meera ₹25,000, one pending ₹1,20,000 transfer.
 
 | # | Test | Steps / Input | Expected result | Actual result | Pass/Fail |
 |---|---|---|---|---|---|
@@ -18,7 +18,7 @@ Fill in the **Actual result** and **Pass/Fail** columns while you test. Demo dat
 | 11 | Withdrawal | Withdraw `500` | Success; balance reduced by 500 | | |
 | 12 | Insufficient funds (withdraw) | Withdraw more than the balance | "Insufficient balance for this withdrawal."; balance unchanged | | |
 | 13 | Normal transfer | Transfer `2000` to `100100000002` | "Transfer completed"; Aarav −2,000; Meera +2,000 (check by logging in as Meera) | | |
-| 14 | High-value transfer pending | Transfer `25000` to `100100000002` | Yellow "pending manager approval" message; **balances unchanged**; history shows "Pending approval" | | |
+| 14 | High-value transfer pending | Transfer `100000` to `100100000002` | Yellow "pending manager approval" message; **balances unchanged**; history shows "Pending approval" | | |
 | 15 | Manager sees request | Log in as manager → Pending Approvals | The new request appears with sender, receiver, amount, date | | |
 | 16 | Manager approval | Approve a request (remarks optional) → confirm | "Transfer approved"; sender debited, receiver credited exactly once; request leaves the pending list; appears in Approval History | | |
 | 17 | Manager rejection | Reject another request with reason "Not verified" | "Transfer rejected"; balances unchanged; history shows Rejected + reason | | |
